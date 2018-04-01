@@ -1,7 +1,10 @@
+
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
 package elseif;
+
+
 
 import java.net.URI;
 
@@ -20,17 +23,22 @@ public class CrazyCatLady {
 		// 4. If they have less than 3 cats AND more than 0 cats, call the method below
 		// to show them a cat video
 		if (cats > 0 && cats < 3) {
-			playVideo("https://video.search.yahoo.com/yhs/search;_ylt=Az_6winx67Zak3oAAiQPxQt.?p=cat+videos&fr=yhs-Lkry-newtab&fr2=piv-web&hspart=Lkry&hsimp=yhs-newtab&type=YHS_CTTT#id=1&vid=bee5eeb4288267a86890ed87aeb48daa&action=view");
+			playVideo("https://www.youtube.com/watch?v=kcKM00lmrjQ");
 			//playVideo("https://www.google.com");
 			// 5. If they have 0 cats, show them a video of A Frog Sitting on a Bench Like a
 			// Human
+			
 
 		}
-	}
-
+		if (cats == 0) {playVideo("https://www.youtube.com/watch?v=ZJT9CeEhM10");
+		}
+		
+		}
+		
+		
 	static void playVideo(String videoURL) {
 		try {
-			URI uri = new URI("videoURL");
+			URI uri = new URI(videoURL);
 			java.awt.Desktop.getDesktop().browse(uri);
 		} catch (Exception e) {
 			e.printStackTrace();
