@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class ObedientRobot {
@@ -6,12 +8,27 @@ public class ObedientRobot {
 
 		 Nathaniel = new Robot();
 		Nathaniel.penDown();
-		DrawSquare();
-		DrawTriangle();
-		DrawCircle();
-
+		String answer = JOptionPane.showInputDialog(null, "Which shape do you want?");
+if(answer.equals("square")) {
+     DrawSquare();
+}
+     if(answer.equals("circle")) {
+         DrawCircle();
+     }
+         if(answer.equals("triangle")) {
+             DrawTriangle();
+         }
+	
+     
 		
+		
+
 	}
+
+
+	
+	
+	
 	public static void DrawSquare() {Nathaniel.move(100);
 	Nathaniel.turn(90);
 	Nathaniel.move(100);
@@ -34,5 +51,7 @@ public class ObedientRobot {
 		Nathaniel.move(1);
 		}
 		
+		
 	}
 	}
+	
